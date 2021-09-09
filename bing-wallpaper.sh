@@ -18,7 +18,7 @@ Options:
                                  the picture if the filename already exists.
   -b --boost <n>                 Use boost mode. Try to fetch latest <n> pictures.
   -q --quiet                     Do not display log messages.
-  -m --monitor <monitor>         The monitor to set the wallpaper on: ${MONITORS[*]}.
+  -m --monitor <monitor>         The monitor to set the wallpaper on: ${MONITORS[*]} (Only mac support for now).
   -n --filename <file name>      The name of the downloaded picture. Defaults to
                                  the upstream name.
   -p --picturedir <picture dir>  The full path to the picture download dir.

@@ -10,7 +10,7 @@ it to a directory.
 
 The script was tested on:
 
-- Mac OS X 10.8 - 10.12, 10.15
+- Mac OS X 10.8 - 10.12, 10.15, 11.5
 - Ubuntu 12.04 - 16.04
 
 How to use?
@@ -29,16 +29,16 @@ Usage:
 Options:
   -f --force                     Force download of picture. This will overwrite
                                  the picture if the filename already exists.
-  -s --ssl                       Communicate with bing.com over SSL.
   -b --boost <n>                 Use boost mode. Try to fetch latest <n> pictures.
   -q --quiet                     Do not display log messages.
+  -m --monitor <monitor>         The monitor to set the wallpaper on: [every] first second (Only mac support for now).
   -n --filename <file name>      The name of the downloaded picture. Defaults to
                                  the upstream name.
   -p --picturedir <picture dir>  The full path to the picture download dir.
                                  Will be created if it does not exist.
                                  [default: $HOME/Pictures/bing-wallpapers/]
   -r --resolution <resolution>   The resolution of the image to retrieve.
-                                 Supported resolutions: 1920x1200 1920x1080 800x480 400x240
+                                 Supported resolutions: UHD [1920x1080] 800x480 400x240
   -w --set-wallpaper             Set downloaded picture as wallpaper (Only mac support for now).
   -h --help                      Show this screen.
   --version                      Show version.
