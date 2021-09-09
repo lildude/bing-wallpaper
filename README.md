@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/thejandroman/bing-wallpaper.svg?branch=travis)](https://travis-ci.org/thejandroman/bing-wallpaper)
-
 Bing Wallpaper for Mac and Ubuntu
 =================================
 
