@@ -13,7 +13,7 @@ The script was tested on:
 
 How to use?
 -----------
-* Just run the **bing-wallpaper.sh** script from the terminal. The script will
+* Just run the `bing-wallpaper.sh` script from the terminal. The script will
 download today's bing image.
 * To see available options run the sript with the `--help` flag:
 
@@ -51,11 +51,11 @@ Configuration on Mac
 directory, and configure to taste.
 
 * To have the script run everyday automatically you will need to setup
-launchd. I have provided a sample plist file, found in the Tools
-directory, which can be copied to **$HOME/Library/LaunchAgents** and
+launchd. I have provided a sample plist file, found in the `Tools`
+directory, which can be copied to `$HOME/Library/LaunchAgents` and
 loaded with the command `launchctl load
 $HOME/Library/LaunchAgents/com.ideasftw.bing-wallpaper.plist`. Modify
-the plist as needed to point to **bing-wallpaper.sh**.
+the plist as needed to point to `bing-wallpaper.sh`.
 
 Configuration on Ubuntu
 -----------------------
@@ -77,10 +77,10 @@ $ bing-wallpaper/Tools/gnome-bing-slideshow/deploy-gnome-settings.sh
 There are two ways to run the scipts regularly: cron jobs and startup
 applications.
 * Cron jobs:
-  * Change the path of **bing-wallpaper.sh** in **Tools/bing-cron** to the
+  * Change the path of `bing-wallpaper.sh` in `Tools/bing-cron` to the
     desired script location. If left unchanged the default value is
-    **~/Pictures/bing-wallpaper.sh**.
+    `~/Pictures/bing-wallpaper.sh`.
   * From the terminal run `crontab /path/to/bing-cron` to setup the cronjob.
 * Startup programs:
   * From HUD, search for startup applications.
-  * Add **bing-random-pic.sh** or **bing-wallpaper.sh**.
+  * Add `bing-random-pic.sh` or `bing-wallpaper.sh`.
