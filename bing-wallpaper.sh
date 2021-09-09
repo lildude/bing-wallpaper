@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# shellcheck disable=SC1117
 
-readonly SCRIPT=$(basename "$0")
+SCRIPT=$(basename "$0")
+readonly SCRIPT
 readonly VERSION='0.5.0'
 readonly RESOLUTIONS=(UHD \[1920x1080\] 800x480 400x240)
 readonly MONITORS=(\[every\] first second)
