@@ -4,6 +4,7 @@
 readonly SCRIPT=$(basename "$0")
 readonly VERSION='0.5.0'
 readonly RESOLUTIONS=(UHD \[1920x1080\] 800x480 400x240)
+readonly MONITORS=(\[every\] first second)
 
 usage() {
 cat <<EOF
@@ -17,6 +18,7 @@ Options:
                                  the picture if the filename already exists.
   -b --boost <n>                 Use boost mode. Try to fetch latest <n> pictures.
   -q --quiet                     Do not display log messages.
+  -m --monitor <monitor>         The monitor to set the wallpaper on: ${MONITORS[*]}.
   -n --filename <file name>      The name of the downloaded picture. Defaults to
                                  the upstream name.
   -p --picturedir <picture dir>  The full path to the picture download dir.
@@ -45,6 +47,7 @@ transform_urls() {
 # Defaults
 PICTURE_DIR="$HOME/Pictures/bing-wallpapers"
 RESOLUTION="1920x1080"
+MONITOR="every"
 BOOST="1"
 
 # Option parsing
@@ -58,6 +61,10 @@ while [[ $# -gt 0 ]]; do
             ;;
         -p|--picturedir)
             PICTURE_DIR="$2"
+            shift
+            ;;
+        -m|--monitor)
+            MONITOR="$2"
             shift
             ;;
         -n|--filename)
@@ -128,8 +135,8 @@ for p in "${urls[@]}"; do
 done
 
 if [ -n "$SET_WALLPAPER" ]; then
-    print_message "Setting wallpaper to $PICTURE_DIR/$filename"
+    print_message "Setting $MONITOR desktop wallpaper to $PICTURE_DIR/$filename"
     /usr/bin/osascript<<END
-tell application "System Events" to tell every desktop to set picture to "$PICTURE_DIR/$filename"
+tell application "System Events" to tell $MONITOR desktop to set picture to "$PICTURE_DIR/$filename"
 END
 fi
