@@ -53,8 +53,7 @@ directory, and configure to taste.
 * To have the script run everyday automatically you will need to setup
 launchd. I have provided a sample plist file, found in the `Tools`
 directory, which can be copied to `$HOME/Library/LaunchAgents` and
-loaded with the command `launchctl load
-$HOME/Library/LaunchAgents/com.ideasftw.bing-wallpaper.plist`. Modify
+loaded with the command `launchctl load $HOME/Library/LaunchAgents/com.ideasftw.bing-wallpaper.plist`. Modify
 the plist as needed to point to `bing-wallpaper.sh`.
 
 Configuration on Ubuntu
