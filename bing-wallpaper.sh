@@ -34,7 +34,8 @@ EOF
 
 print_message() {
     if [ -z "$QUIET" ]; then
-        printf "%s\n" "${1}"
+        date=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+        printf "%s %s\n" "$date" "${1}"
     fi
 }
 
